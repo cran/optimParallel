@@ -12,8 +12,17 @@
 \alias{optimparallel-Package}
 \title{parallel version of the L-BFGS-B method of \code{\link[stats]{optim}}}
 \usage{
-optimParallel(par, fn, gr = NULL, ..., lower = -Inf, upper = Inf,
-  control = list(), hessian = FALSE, parallel = list())
+optimParallel(
+  par,
+  fn,
+  gr = NULL,
+  ...,
+  lower = -Inf,
+  upper = Inf,
+  control = list(),
+  hessian = FALSE,
+  parallel = list()
+)
 }
 \arguments{
 \item{par}{see the documentation of \code{\link[stats]{optim}}.}
@@ -100,7 +109,7 @@ an R script reproducing the issue and the output of \code{sessionInfo()}.
 \examples{
 negll <- function(par, x, sleep=0, verbose=TRUE){
     if(verbose)
-        cat(par, "\\n")
+        cat(par, "\n")
    Sys.sleep(sleep)
    -sum(dnorm(x=x, mean=par[1], sd=par[2], log=TRUE))
 }
@@ -162,9 +171,9 @@ optimParallel(par=1, fn=fn, a=20, b=1)
 setDefaultCluster(cl=NULL); stopCluster(cl) }
 }
 \references{
-F. Gerber, R. Furrer (2018)
-optimParallel: an R Package Providing Parallel Versions of the Gradient-Based Optimization Methods of optim(). 
-ArXiv e-prints. URL http://arxiv.org/abs/1804.11058.
+F. Gerber, R. Furrer (2019)
+optimParallel: An R package providing a parallel version of the L-BFGS-B optimization method.
+The R Journal, 11(1):352-358, https://doi.org/10.32614/RJ-2019-030
 Also available as vignette of this package \code{vignette("optimParallel")}.
 }
 \seealso{

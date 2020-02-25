@@ -7,7 +7,7 @@ optimParallel can significantly reduce the optimization time. For a p-parameter 
 the speed increase is about factor 1+2p when no analytic gradient is specified and
 1+2p processor cores are available.
 
-See the ArXiv e-prints URL http://arxiv.org/abs/1804.11058
-also available as package vignette for more information.
+See the R Journal article https://doi.org/10.32614/RJ-2019-030 for more information.
+It is also available as vignette.
 
 R> vignette("optimParallel")

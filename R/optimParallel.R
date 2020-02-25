@@ -40,9 +40,9 @@
 #' and its (approximate) gradient in parallel.\cr\cr
 #' Some default values of the argument \code{parallel} can be set via\cr\code{options("optimParallel.forward", "optimParallel.loginfo")}.
 #'
-#' @references F. Gerber, R. Furrer (2018)
-#' optimParallel: an R Package Providing Parallel Versions of the Gradient-Based Optimization Methods of optim(). 
-#' ArXiv e-prints. URL http://arxiv.org/abs/1804.11058.
+#' @references F. Gerber, R. Furrer (2019)
+#' optimParallel: An R package providing a parallel version of the L-BFGS-B optimization method.
+#' The R Journal, 11(1):352-358, https://doi.org/10.32614/RJ-2019-030
 #' Also available as vignette of this package \code{vignette("optimParallel")}. 
 #'
 #' @section Notes:
@@ -156,6 +156,8 @@ optimParallel <- function(par, fn, gr = NULL, ...,
     out <- stats::optim(par=par, fn=fg$f, gr=fg$g, method = "L-BFGS-B", lower=lower,
                         upper=upper, control=control, hessian=hessian)
     out$value <- out$value*fg$control$fnscale
+    if(hessian[1])
+        out$hessian <- out$hessian*fg$control$fnscale
     if(fg$parallel$loginfo){
         out[[length(out)+1]] <- fg$getLog()
         names(out)[length(out)] <- "loginfo"

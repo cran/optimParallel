@@ -87,3 +87,19 @@ test_that("optimParallel - fn and gr can have different aguments",{
 })
 
 
+test_that("optimParallel return correct sign of hessian if 'fnscale=-1'", {
+    set.seed(13)
+    x <- rnorm(1000, 5, 2)
+    negll <- function(par, x) { -sum(dnorm(x=x, mean=par[1], sd=par[2], log=TRUE)) }
+    posll <- function(par, x) {  sum(dnorm(x=x, mean=par[1], sd=par[2], log=TRUE)) }
+
+    compareOptim(list(par=c(1,1), fn=negll, x=x,
+                      control=control, hessian=TRUE),
+                 verbose=verbose)
+
+    compareOptim(list(par=c(1,1), fn=posll, x=x,
+                      control=c(control, fnscale=-1), hessian=TRUE),
+                 verbose=verbose)
+})
+
+
