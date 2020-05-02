@@ -1,9 +1,16 @@
+- version 1.0-1: 
+commit 6f389aa916dc8cbc2398b2ed3635713a4ecf1778
+Author: Florian Gerber <florian.gerber@math.uzh.ch>
+Date:   Tue Apr 21 15:26:15 2020 -0600
+(1) pkg 'lbfgsb3' removed from suggest because the package has been archived.
+(2) 'fn' and 'gr' can now have multiple arguments mixed with '...'.
+
 - version 1.0: 
 commit 373ce0334eb05a7c382bd95d086b83966ceb64e1
 Author: Florian Gerber <florian.gerber@math.uzh.ch>
 Date:   Mon Feb 24 17:51:45 2020 -0700
-(1) bug fix: hessian has now correct sign if 'fnscale=-1'
-(2) Vignette and citation info updated  
+(1) bug fix: hessian has now correct sign if 'fnscale=-1'.
+(2) Vignette and citation info updated.
 
 - version 0.8: 
 commit f0a8ed6e658cb481d549fd908d5640bf03abf394
@@ -18,7 +25,7 @@ Date:   Mon Feb 25 18:38:17 2019 +0100
 commit 813a06269b6e777157fbe529bc62e38fc4d59de4
 Author: Florian Gerber <florian.gerber@math.uzh.ch>
 Date:   Mon Oct 15 22:40:37 2018 -0600
-(1) 'fn'. 'gr' can now be functions from other packages 
+(1) 'fn' and 'gr' can now be functions from other packages 
     calling compiled code, e.g., 
     optimParallel(par=1, fn=dnorm, mean=3)
 

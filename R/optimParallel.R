@@ -335,6 +335,8 @@ getFunCallStr <- function(fn, fnName="fn", dots){
             ff <- ff[-1]
         if(all(names(ff) != "..."))    
             ff <- ff[names(ff) %in% names(dots)]
+        else
+            ff <- dots
         if(length(ff)>=1){
             ex <- paste0(ex, ",")
             moreArgs <- paste(lapply(names(ff), function(x) paste0(x, "=", x)), collapse = ", ")
