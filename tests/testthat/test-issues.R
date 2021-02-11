@@ -103,7 +103,7 @@ test_that("optimParallel return correct sign of hessian if 'fnscale=-1'", {
 })
 
 test_that("fn can have normal and ... aguments", {
-    fn <- function(par, data, ...)  sum(par-data)^2
+    fn <- function(par, data, ...)  par^2
     compareOptim(list(par=1, fn=fn, data=1:10,
                       control=control),
                  verbose=verbose)

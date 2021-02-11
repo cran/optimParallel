@@ -1,6 +1,6 @@
 #' @name optimParallel
 #' @aliases optimparallel optimParallel-package optimParallel-Package OptimParallel-package OptimParallel-Package optimparallel-package optimparallel-Package 
-#' @author Florian Gerber, \email{florian.gerber@@math.uzh.ch}, \url{https://user.math.uzh.ch/gerber}.
+#' @author Florian Gerber, \email{flora.fauna.gerber@@gmail.com}, \url{https://user.math.uzh.ch/gerber}.
 #' @title parallel version of the L-BFGS-B method of \code{\link[stats]{optim}}
 #' @keywords package
 #' @docType package
@@ -71,8 +71,8 @@
 #' }
 #'
 #' @section Issues and bug report:
-#' A list of known issues of \code{optimParallel} can be found at \url{https://git.math.uzh.ch/florian.gerber/optimParallel/issues}.
-#' Please report issues not listed there to\eqn{\,} \email{florian.gerber@@math.uzh.ch}. Do not forget to include
+#' A list of known issues of \code{optimParallel} can be found at \url{https://github.com/florafauna/optimParallel-R/issues}.
+#' Please report issues not listed there to\eqn{\,} \email{flora.fauna.gerber@@gmail.com}. Do not forget to include
 #' an R script reproducing the issue and the output of \code{sessionInfo()}. 
 #' 
 #' @seealso

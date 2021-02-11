@@ -101,8 +101,8 @@ setting up a cluster with less parallel processes.}
 
 \section{Issues and bug report}{
 
-A list of known issues of \code{optimParallel} can be found at \url{https://git.math.uzh.ch/florian.gerber/optimParallel/issues}.
-Please report issues not listed there to\eqn{\,} \email{florian.gerber@math.uzh.ch}. Do not forget to include
+A list of known issues of \code{optimParallel} can be found at \url{https://github.com/florafauna/optimParallel-R/issues}.
+Please report issues not listed there to\eqn{\,} \email{flora.fauna.gerber@gmail.com}. Do not forget to include
 an R script reproducing the issue and the output of \code{sessionInfo()}.
 }
 
@@ -184,6 +184,6 @@ Also available as vignette of this package \code{vignette("optimParallel")}.
 \code{\link[parallel]{detectCores}}.
 }
 \author{
-Florian Gerber, \email{florian.gerber@math.uzh.ch}, \url{https://user.math.uzh.ch/gerber}.
+Florian Gerber, \email{flora.fauna.gerber@gmail.com}, \url{https://user.math.uzh.ch/gerber}.
 }
 \keyword{package}
